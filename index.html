@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Katie Magdaleno - Portfolio</title>
+    <style>
+        /* :root
+        {
+            --color-primary: darkorange;
+            --color-secondary: silver;
+            --color-tertiary: black;
+        } */
+        html{
+            scroll-behavior: smooth;
+        }
+        .container{
+            background-color: white;
+            min-height:12rem;
+            max-width: 120rem;
+            margin:auto;
+            padding:1rem 3rem 1rem 3rem;
+            position: relative;
+            border: 1px solid black;
+        }
+        #pageheader
+        {
+            min-height: 200px;
+            
+            background-color: #FDDAE1; 
+            padding:1rem;
+        }
+
+        #logo{
+            
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            background-image: url(Images/logo1.jpg);
+            background-size: cover;
+            border: 5px solid #F9D3E2;
+            position: absolute;
+            left: calc(50% - 75px);
+            transition: all 2s;
+        
+
+        }
+        #pagenav
+        {
+            
+            background-color: #FAA8BB; 
+            min-height: 40px;
+            width: 300px;
+            display: flex;
+            align-items: center;
+            justify-content: space-evenly;
+            position: absolute;
+            bottom: 0px;
+            left:calc(50% - 150px);
+        }
+        #media
+        {
+            min-height: 200px;
+            
+            background-color:#FFEDEA; 
+            padding:1rem;
+        }
+        #career
+        {
+            min-height: 200px;
+            background-color:#FED9DD;
+            padding:1rem;
+        }
+        #pagecontent
+        {
+            min-height: 200px;
+            background-color: white;
+            padding:1rem;
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+            font-size: x-large;
+            font-stretch: semi-condensed;
+        }
+        #semester1
+        {
+            min-height: 200px;
+            background-color: #FCD5CE;
+            background-image: url(Images/images.jpg); 
+            padding:1rem;
+        }
+        #semester2
+        {
+            min-height: 200px;
+            background-color: #FCD5CE;
+            background-image: url(Images/images.jpg);
+            padding:1rem;
+        }
+        #pagefooter
+        {
+            min-height: 200px;
+            background-color: cornflowerblue;
+            padding:1rem;
+
+        }
+    
+        #subfooter
+        {
+            min-height: 200px;
+            background-color: peachpuff;
+            padding:1rem;
+        }
+/* Media Queries */
+        @media only screen and (min-width: 320px)
+        {
+            #pagecontent
+            {
+                background-color: magenta;
+            }
+        }
+        @media only screen and (min-width: 480px)
+        {
+            #pagecontent
+            {
+                background-color: yellow;
+            }
+
+            #media{
+                height: 450px;
+            }
+
+        } 
+        
+        @media only screen and (min-width: 768px)
+        {
+            #pagecontent
+            {
+                background-color:white;
+            }
+            #logo{
+                left: 25px;
+            }
+        }
+        
+        @media only screen and (min-width: 1024px)
+        {
+            #pagecontent
+            {
+                background-color: #FFFFFF;
+            }
+            #pagenav{
+                top: 0px;
+                right:0px;
+                left:auto;
+                bottom:auto;
+            }
+        } 
+        
+        @media only screen and (min-width: 1200px)
+        {
+            #pagecontent
+            {
+                background-color:white;
+            }
+        }  
+    </style>
+</head>
+<body>
+    <!-- begin pageheader -->
+    <header id="pageheader">
+        <div class="container">
+            <div id="logo"></div>  
+            <nav id="pagenav">
+                <a href="#career">Career</a> 
+                |
+                <a href="#semester1">Semester 1 </a>
+                |
+                <a href="#semester2">Semester 2</a>
+            </nav>
+        </div>
+        
+
+    </header>
+    <!-- end pageheader -->
+
+    <!-- beging media -->
+    <section id="media">
+
+        media
+        <div class="container"></div>
+    </section>
+    <!-- end media -->
+
+    <!-- begin career -->
+    <main></main>
+    <!-- begin pagecontent -->
+    <section id="pagecontent">
+        <h2>Introduction</h2>
+        <div class="container">
+            <p> Welcome to my WebPage!! This will be my third amazing year of web development. Although I spent 3 years of my Highschool career learning about coding and webpages it's not something it'd consider as doing for my future career but is a very valuable skill. Besides coding I love dancing and I had been doing it for about 7 years of my life, it's something I am very passionate about and love doing.</p>
+        
+        </div>
+    </section>
+    <!-- end pagecontent -->
+
+    <section id="semester1">
+        <div class="container">
+        <a name="semester1"></a>
+        <h2>Semester1</h2>
+        </div>
+    </section>
+
+    <section id="semester2">
+        <div class="container">
+            <a name="semester2"></a>
+            <h2>Semester2</h2>
+        </div>
+    </section>
+    
+    <section id="career">
+
+        career
+        <div class="container"></div>
+    </section>
+    <!-- end career -->
+
+    <!-- begin pagefooter -->
+    <footer id="pagefooter">
+        pagefooter
+        
+        <div class="container">
+            <a href="https://coolors.co/">color schemes</a> |
+            <a href="https://coalingahuron.aeries.net/" target="new">aeries</a> |
+            <a href="https://www.chusd.org/">chs</a> |
+            <a href="https://classroom.google.com/">classroom</a> | 
+            <a href="https://codepip.com/">codepip</a>
+        </div>
+
+        </footer>
+        <!-- end pagefooter -->
+            <!-- begin subfooter -->
+    <footer id="subfooter">
+        subfooter
+        
+        <div class="container"></div>
+        </footer>
+        <!-- end subfooterfooter -->
+</body>
+</html>
