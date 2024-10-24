@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Canvas Exploration 2</title>
+    <style>
+        h1{
+            text-align:center;
+        }
+        #canvas
+        {
+            border: 2px solid black;
+            margin: auto;
+            display: block;
+        }
+        #buttonholder
+        {
+            background-color: none;
+            width: 300px;
+            margin:auto;
+            display:flex;
+            flex-direction: column;
+        }
+        button
+        {
+            margin: 0.5rem;
+            padding:0.5rem;
+        }
+    </style>
+</head>
+<body>
+    <h1>Canvas Exploration</h1>
+    <canvas id="canvas"></canvas>
+    <div id="buttonholder">
+    <button id="createline">Create Line</button>
+    <button id="createrectangle">Create Rectangle</button>
+    <button id="createtriangle">Create Triangle</button>
+    <button id="createarc">Create Arc</button>
+    <button id="createstar">Create Star</button>
+    <!-- <button id="undodraw">Undo</button> -->
+     <button id="clear">Clear</button>
+</div>
+
+<script>
+    // Creat variable 
+    const canvas= window.document.querySelector('#canvas');
+    //window.alert(canvas);
+    // Give canvas drawing powers 
+    const ctx = canvas.getContext("2d");
+
+    //Configure canvas
+    canvas.width = 400;
+    canvas.height = 400;
+    canvas.style.backgroundColor = "lightblue";
+
+    //Add event listeners
+    // Create variable for buttons
+     const btnCreateLine = window.document.querySelector('#createline');
+     const btnCreateRectangle = window.document.querySelector('#createrectangle');
+     const btnCreateTriangle = window.document.querySelector('#createtriangle');
+     const btnCreateArc = window.document.querySelector('#createarc');
+     const btnCreateStar = window.document.querySelector('#createstar');
+     const btnClear = window.document.querySelector('#clear');
+     //const btnUndo = window.document.querySelector('#undodraw');
+
+
+
+     //window.alert(btnCreateLine)
+
+  btnCreateLine.style.backgroundColor = 'red';
+  btnCreateRectangle.style.backgroundColor = 'orange';
+  btnCreateTriangle.style.backgroundColor = 'yellow';
+  btnCreateArc.style.backgroundColor = 'green';
+  btnCreateStar.style.backgroundColor = 'blue';
+  //btnUndo.style.backgroundColor = 'purple';
+  btnClear.style.backgroundColor = 'pink';
+
+btnCreateLine.addEventListener('click' , function()
+{ 
+    //window.alert('Create Line');
+    ctx.strokeStyle = "pink";
+    ctx.lineWidth = 10;
+    ctx.lineCap = "round";
+    ctx.lineJoin = "miter";
+
+
+    ctx.beginPath();
+    ctx.moveTo(100, 100);
+    ctx.lineTo(200, 200);
+    ctx.lineTo(100, 300);
+    ctx.stroke();
+
+});
+
+btnCreateRectangle.addEventListener('click' , function()
+{ 
+    window.alert('Create Rectangle'); 
+});
+btnCreateTriangle.addEventListener('click' , function()
+{ 
+    //window.alert('Create Triangle'); 
+    // Create triangle 
+    // Set parameters (drawing Triangle)
+    ctx.strokeStyle = "blue";
+    ctx.fillStyle = "purple"
+    ctx.lineWidth = 5;
+    ctx.lineCap = "round";
+    ctx.lineJoin = "miter";
+
+
+    // Start the drawing (draw lines)
+    ctx.beginPath()
+    ctx.moveTo(200, 200);
+    ctx.lineTo(10, 200);
+    ctx.lineTo(200, 10);
+    ctx.lineTo(390, 200);
+   // ctx.lineTo(200, 200);
+    ctx.closePath();
+
+    // Finish the drawing 
+    ctx.stroke();
+    ctx.fill();
+});
+btnCreateStar.addEventListener('click' , function()
+{ 
+    //window.alert('Create Star'); 
+    ctx.strokeStyle = "pink";
+    ctx.fillstyle = "orange";
+    ctx.lineWidth = 5;
+    ctx.lineCap = "round";
+    ctx.lineJoin = "miter";
+
+    ctx.beginPath()
+
+    ctx.moveTo(100, 100);
+    ctx.lineTo(50, 50);
+
+
+
+    
+    
+});
+btnCreateArc.addEventListener('click' , function()
+{ 
+    window.alert('Create Arc');
+    
+});
+btnCreateStar.addEventListener('click' , function()
+{ 
+    window.alert('Create Star');
+    
+});
+//btnUndo.addEventListener('click' , function()
+//{ 
+//    window.alert('Create Undo');
+    
+//});
+
+// Clear 
+
+
+
+
+
+btnClear.addEventListener('click', function () {
+   // window.alert('Clear');
+
+    ctx.clearRect(0,0, canvas.width, canvas.height);
+})
+
+
+</script>
+</body>
+</html>

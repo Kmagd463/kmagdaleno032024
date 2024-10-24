@@ -30,13 +30,17 @@
             background-color: #FDDAE1; 
             padding:1rem;
         }
+        #pageheader .container
+        {
+            background-color: pink;
+        }
 
         #logo{
             
             width: 150px;
             height: 150px;
             border-radius: 50%;
-            background-image: url(Images/logo1.jpg);
+            background-image: url(Images/Logo3.png);
             background-size: cover;
             border: 5px solid #F9D3E2;
             position: absolute;
@@ -48,9 +52,9 @@
         #pagenav
         {
             
-            background-color: #FAA8BB; 
+            background-color: none; 
             min-height: 40px;
-            width: 300px;
+            width: 400px;
             display: flex;
             align-items: center;
             justify-content: space-evenly;
@@ -58,10 +62,15 @@
             bottom: 0px;
             left:calc(50% - 150px);
         }
+        #pagenav a 
+        {
+            color: white;
+            text-decoration:none;
+            text-transform: uppercase;
+        }
         #media
         {
             min-height: 200px;
-            
             background-color:#FFEDEA; 
             padding:1rem;
         }
@@ -72,6 +81,15 @@
             padding:1rem;
         }
         #pagecontent
+        {
+            min-height: 200px;
+            background-color: white;
+            padding:1rem;
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+            font-size: x-large;
+            font-stretch: semi-condensed;
+        }
+        #keyassignments
         {
             min-height: 200px;
             background-color: white;
@@ -108,6 +126,10 @@
             background-color: peachpuff;
             padding:1rem;
         }
+        .footerlinks
+        {
+            display:none;
+        }
 /* Media Queries */
         @media only screen and (min-width: 320px)
         {
@@ -120,7 +142,7 @@
         {
             #pagecontent
             {
-                background-color: yellow;
+                background-color: white;
             }
 
             #media{
@@ -131,6 +153,15 @@
         
         @media only screen and (min-width: 768px)
         {
+            #flexsubfooter{
+                display:flex;
+                justify-content:space-between;
+            }
+            .footerlinks {
+
+                display: block;
+                min-width:250px;
+            }
             #pagecontent
             {
                 background-color:white;
@@ -172,8 +203,10 @@
                 <a href="#career">Career</a> 
                 |
                 <a href="#semester1">Semester 1 </a>
+                <!-- |
+                <a href="#semester2">Semester 2</a> -->
                 |
-                <a href="#semester2">Semester 2</a>
+                <a href="#keyassignments">Key Assignments</a>
             </nav>
         </div>
         
@@ -184,17 +217,34 @@
     <!-- beging media -->
     <section id="media">
 
-        media
-        <div class="container"></div>
+    
+    
     </section>
     <!-- end media -->
 
+
     <!-- begin career -->
-    <main></main>
+    <section id="career">
+       
+        <div class="container"> <h2>Career</h2>
+            <ul>
+                <li>Letter of Introduction</li>
+                <li>Resume</li>
+
+            </ul>
+
+        
+        </div>
+    </section>
+    <!-- end pagecontent -->
+
+
+
     <!-- begin pagecontent -->
     <section id="pagecontent">
-        <h2>Introduction</h2>
-        <div class="container">
+      
+        <div class="container"> 
+             <h2>Introduction</h2>
             <p> Welcome to my WebPage!! This will be my third amazing year of web development. Although I spent 3 years of my Highschool career learning about coding and webpages it's not something it'd consider as doing for my future career but is a very valuable skill. Besides coding I love dancing and I had been doing it for about 7 years of my life, it's something I am very passionate about and love doing.</p>
         
         </div>
@@ -205,26 +255,35 @@
         <div class="container">
         <a name="semester1"></a>
         <h2>Semester1</h2>
+        
         </div>
     </section>
+    
+    <div id="keyassignments">
+        <div class = "container">
+        <a name="keyassignments"></a>
+        <h2>Key Assignments</h2>
+        <p>
+            "Welcome to my WebPage!! This will be my third amazing year of web development. Although I spent 3 years of my Highschool career learning about coding and webpages it's not something it'd consider as doing for my future career but is a very valuable skill. Besides coding I love dancing and I had been doing it for about 7 years of my life, it's something I am very passionate about and love doing."</p>
 
-    <section id="semester2">
+        </p>
+    </div>
+
+    <!-- <section id="semester2">
         <div class="container">
             <a name="semester2"></a>
             <h2>Semester2</h2>
         </div>
-    </section>
-    
-    <section id="career">
+    </section> -->
 
-        career
-        <div class="container"></div>
-    </section>
-    <!-- end career -->
+
+        
+
+
 
     <!-- begin pagefooter -->
     <footer id="pagefooter">
-        pagefooter
+       
         
         <div class="container">
             <a href="https://coolors.co/">color schemes</a> |
@@ -238,9 +297,37 @@
         <!-- end pagefooter -->
             <!-- begin subfooter -->
     <footer id="subfooter">
-        subfooter
+     
         
-        <div class="container"></div>
+        <div class="container">
+            <!-- <h2>PageFooter</h2> -->
+
+
+
+
+<div id="flexsubfooter">
+                <div class="quote">
+                    <h3>Final Thoughts</h3>
+                    <blockquote>
+                        "Sing to the Lord a new song; sing to the Lord, all the earth. Sing to the Lord, praise his name; proclaim his salvation day after day. Declare his glory among the nations, his marvelous deeds among all peoples."
+                    </blockquote>
+                    <p> Psalm 96: 1-3 </p>
+    
+                </div>
+    
+                <div class="footerlinks">
+                    <h3>Links</h3>
+                    <ul>
+                        <li>Career</li>
+                        <li>Semester1</li>
+                        <!-- <li>Semester2</li> -->
+                        <li>Key Assignments</li>
+                    </ul>
+                </div>
+</div>
+
+
+        </div>
         </footer>
         <!-- end subfooterfooter -->
 </body>
