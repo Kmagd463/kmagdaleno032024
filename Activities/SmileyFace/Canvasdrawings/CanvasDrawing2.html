@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Canvas Drawing 2</title>
+    <style>
+        h1 
+        {
+            text-align: center;
+        }
+
+        #canvas
+        {
+            margin: auto;
+            display:block;
+            border: 5px solid orange;
+        }
+    </style>
+</head>
+<body>
+    <h1>Canvas Drawing 2</h1>
+    <canvas id="canvas" width="800px" height="500px"></canvas>
+
+    <script>
+        const canvas = window.document.querySelector('#canvas');
+        const ctx = canvas.getContext('2d');
+
+        ctx.strokeStyle = 'orange';
+        ctx.fillStyle = 'orange';
+        ctx.lineWidth = 50;
+
+        ctx.beginPath();
+        ctx.arc(370, 150, 80, 0, 7);
+        ctx.stroke();
+        ctx.fill();
+        ctx.beginPath();
+        ctx.rect()
+
+
+    </script>
+
+
+
+</body>
+</html>
