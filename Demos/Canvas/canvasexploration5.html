@@ -93,9 +93,21 @@ btnCreateLine.addEventListener('click' , function()
 
 });
 
+const btnCreateRectangle =
+    window.document.querySelector('#createrectangle')
+
 btnCreateRectangle.addEventListener('click' , function()
 { 
-    window.alert('Create Rectangle'); 
+    //window.alert('Create Rectangle'); 
+    ctx.strokeStyle = 'indigo';
+    ctx.fillStyle = 'red';
+    ctxlineWidth = 10;
+    ctx.lineCap = 'square';
+    ctx.lineJoin = 'square';
+
+    ctx.beginPath();
+    ctx.fillReact( 0, 0, 400, 400);
+    ctx.stroke();
 });
 btnCreateTriangle.addEventListener('click' , function()
 { 

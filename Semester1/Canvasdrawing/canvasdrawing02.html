@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Canvas Drawing</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        }
+        body {
+        margin-top: 50px;
+        }
+        h1 {
+        text-align: center;
+        }
+        #canvas {
+        margin: auto;
+        display: block;
+        border: 5px solid pink;
+        }
+    </style>
+</head>
+<body>
+    <h1>Canvas Drawing</h1>
+    <canvas id="canvas" width="1000px" height="500px"></canvas>
+
+    <script>
+      // Create variables
+        const canvas = window.document.querySelector('#canvas');
+        const ctx = canvas.getContext('2d');
+
+
+        ctx.strokeStyle = 'pink';
+        ctx.fillStyle = 'pink';
+        ctx.lineWidth = 20;
+        ctx. beginPath();
+        ctx.arc(500, 190, 63, 0, 7);
+        ctx.stroke();
+        ctx.fill();
+
+        ctx.strokeStyle = 'pink';
+        ctx.fillStyle = 'lightpink';
+        ctx.lineWidth = 20;
+        ctx. beginPath();
+        ctx.arc(526, 110, 10, 0, 7);
+        ctx.stroke();
+        ctx.fill();
+
+        ctx.strokeStyle = 'pink';
+        ctx.fillStyle = 'lightpink';
+        ctx.lineWidth = 20;
+        ctx. beginPath();
+        ctx.arc(480, 110, 10, 0, 7);
+        ctx.stroke();
+        ctx.fill();
+
+
+
+        ctx.strokeStyle = 'red';
+        ctx.fillStyle = "";
+
+        
+
+        ctx.strokeStyle = 'black';
+        ctx.fillStyle = 'black';
+        ctx.lineWidth = 20;
+        ctx. beginPath();
+        ctx.arc(480, 160, 1, 0, 7);
+        ctx.stroke();
+        ctx.fill();
+
+        ctx.strokeStyle = 'black';
+        ctx.fillStyle = 'black';
+        ctx.lineWidth = 20;
+        ctx. beginPath();
+        ctx.arc(520, 160, 1, 0, 7);
+        ctx.stroke();
+        ctx.fill();
+
+
+        ctx.strokeStyle = 'lightpink';
+        ctx.fillStyle = 'lightpink';
+        ctx.lineWidth = 9;
+        ctx.beginPath();
+        ctx.arc(550, 207, 38, 0, 7);
+        ctx.stroke();
+        ctx.fill();
+
+
+
+
+
+        ctx.strokeStyle = 'pink';
+        ctx.fillStyle = 'pink';
+        ctx.lineWidth = 20;
+        ctx. beginPath();
+        ctx.arc(360, 250, 110, 0, 7);
+        ctx.stroke();
+        ctx.fill(); 
+
+        ctx.strokeStyle = 'pink';
+        ctx.fillStyle = 'white';
+        ctx.lineWidth = 20;
+        ctx. beginPath();
+        ctx.arc(230, 250, 10, 0, 3);
+        ctx.stroke();
+        ctx.fill(); 
+
+        ctx.strokeStyle = 'pink';
+        ctx.fillStyle = 'pink';
+        ctx.lineWidth = 30;
+        ctx. beginPath();
+        ctx.rect(300, 370, 103, 0, 7);
+        ctx.stroke();
+        ctx.fill(); 
+
+        ctx.strokeStyle = 'black';
+        ctx.fillStyle = 'black';
+        ctx.lineWidth = 10;
+        ctx. beginPath();
+        ctx.rect(300, 390, 103, 0, 7);
+        ctx.stroke();
+        ctx.fill(); 
+
+        ctx.strokeStyle = 'black';
+        ctx.fillStyle = 'black';
+        ctx.lineWidth = 10;
+        ctx. beginPath();
+        ctx.rect(349, 379, 3, 11, 7);
+        ctx.stroke();
+        ctx.fill(); 
+
+
+        ctx.strokeStyle = 'black';
+        ctx.fillStyle = 'black';
+        ctx.lineWidth = 20;
+        ctx. beginPath();
+        ctx.arc(540, 210, 1, 0, 7);
+        ctx.stroke();
+        ctx.fill(); 
+
+        ctx.strokeStyle = 'black';
+        ctx.fillStyle = 'black';
+        ctx.lineWidth = 20;
+        ctx. beginPath();
+        ctx.arc(570, 210, 1, 0, 7);
+        ctx.stroke();
+        ctx.fill(); 
+
+
+
+
+
+
+    </script>
+    </body>
+</html>
