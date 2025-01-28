@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Personal Array </title>
+</head>
+<body>
+    <h1> Personal Array - SpongeBob Characters </h1>
+    <script>
+
+        let SpongeBobCharacters;
+        SpongeBobCharacters = [];
+
+        SpongeBobCharacters[0] = " SponegbobSquarePants "
+        SpongeBobCharacters[1] = " PatrickStar "
+        SpongeBobCharacters[2] = " SquidwardTentacles "
+        SpongeBobCharacters[3] = " SandyCheeks "
+        SpongeBobCharacters[4] = " Mr.Krab "
+        SpongeBobCharacters[5] = " Plankton "
+
+
+        window.document.write(SpongeBobCharacters);
+
+        SpongeBobCharacters.push(" SpongeBobSquarePants ");
+        SpongeBobCharacters.push(" PatrickStar ");
+        SpongeBobCharacters.shift(" SquidwardTentacles ");
+        SpongeBobCharacters.pop(" SandyCheeks ");
+        SpongeBobCharacters.unshift(" Mr.Krab ");
+        SpongeBobCharacters.pop(" Plankton ");
+
+
+        console.log(SpongeBobCharacters);
+
+
+        SpongeBobCharacters.pop();
+        SpongeBobCharacters.shift();
+        SpongeBobCharacters.push();
+        SpongeBobCharacters.unshift();
+
+        console.log( SpongeBobCharacters.length);
+        
+
+        SpongeBobCharacters.forEach(function(character)
+        {
+            console.log(character + "loves Krabby Patties");
+        });
+        SpongeBobCharacters.forEach(function(character)
+        {
+            console.log(character + "has a boating license");
+        });
+        SpongeBobCharacters.forEach(function(character)
+        {
+            console.log( character + "lives in bikini bottom");
+        });
+        SpongeBobCharacters.forEach(function(character)
+    {
+        console.log(character + "goes to weiny hut jr");
+    });
+    SpongeBobCharacters.forEach(function(character)
+    {
+        console.log(character + "loves diet Dr kelp");
+    });
+        
+    </script>
+</body>
+</html>
