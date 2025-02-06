@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid Layout</title>
+    <style>
+        /* Mobile First Design */
+        body
+        {
+            background-color: pink;
+            padding-top:1rem;
+
+        }
+        #container
+        {
+            max-width:1200px;
+            background-color: hotpink;
+            margin:auto;
+            border: 1px white;
+        }
+        nav{
+            background-color: lavenderblush;
+            min-height:5rem;
+            padding:1rem;
+            grid-area:hea;
+        }
+        header{
+            background-color: lightpink;
+            min-height:5rem;
+            padding:1rem;
+
+        }
+        div#media
+        {
+            background-color: lavenderblush;
+            min-height:5rem;
+            padding:1rem;
+        }
+        main
+        {
+            background-color: hotpink;
+            min-height:5rem;
+            padding:1rem;
+        }
+        aside
+        {
+            background-color: lightpink;
+            min-height:5rem;
+            padding:1rem;
+        }
+        footer
+        {
+            background-color: lavenderblush;
+            min-height:5rem;
+            padding:1rem;
+        }
+        footer#subfooter
+        {
+            background-color: hotpink;
+            min-height:5rem;
+            padding:1rem;
+        }
+        /* Tablet and desktop*/
+        /* Media Queries*/
+        @media screen and (min-width:480px)
+        {
+            body
+            {
+                background-color: white;
+            }
+        }
+
+        @media screen and (min-width:768px)
+        {
+            body
+            {
+                background-color: purple;
+            }
+        }
+
+        @media screen and (min-width:1200px)
+        {
+            body
+            {
+                background-color: magenta;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <nav>Nav</nav>
+        <header>Header</header>
+        <div id="media">Media</div>
+        <main>Main</main>
+        <aside>Aside</aside>
+        <footer>Footer</footer>
+        <footer id="subfooter"></footer>
+    </div>
+</body>
+</html>
