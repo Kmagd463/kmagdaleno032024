@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Grid Areas </title>
+    <style>
+        body
+        {
+            background-color: #FB6F93;
+            padding-top:1rem;
+        }
+        #container
+        {
+        max-width: 1200px;
+        width: 80%;
+        background-color: #FD8FAB;
+        margin:auto;
+        border: 30px solid white;
+        }
+        nav
+        {
+            background-color: #FFB3C6;
+            min-height:5rem;
+            padding:1rem;
+            grid-area: nav;
+        }
+        header{
+            background-color: #FFC2D3;
+            min-height:10rem;
+            padding:1rem;
+            grid-area: hea;
+        }
+        div#media
+        {
+            background-color: #FEE5EB;
+            min-height:50rem;
+            padding:1rem;
+            grid-area: med;
+        }
+        main
+        {
+            background-color: #A41C57;
+            min-height:rem;
+            padding:1rem;
+            grid-area: mai;
+        }
+        aside
+        {
+            background-color: #FF8CBD;
+            min-height:5rem;
+            padding:1rem;
+            grid-area: asi;
+        }
+        div#card001
+        {
+            background-color: #F4C9D5;
+            min-height:5rem;
+            padding:1rem;
+            grid-area: card001;
+        }
+        div#card002
+        {
+            background-color: #F4C9D5;
+            min-height:5rem;
+            padding:1rem;
+            grid-area: card002;
+        }
+        div#card003
+        {
+            background-color: #F4C9D5;
+            min-height:5rem;
+            padding:1rem;
+            grid-area: card003;
+        }
+        footer
+        {
+            background-color: #FF61C5;
+            min-height:5rem;
+            padding: 1rem;
+            grid-area: foo;
+        }
+        footer#subfooter
+        {
+            background-color: #FFB2EE;
+            min-height:5rem;
+            padding:1rem;
+            grid-area: sub;
+        }
+
+        #wrapper
+        {
+            width:80%;
+            max-width: 1200px;
+            margin:auto;
+        }
+        main
+        {
+            line-height: 1.7;
+            color: black;
+            padding:5rem;
+        }
+
+        @media screen and (min-width:480px)
+        {
+            body{background-color: hotpink;}
+            #container
+            {
+                display:grid;
+                gap:10px;
+                grid-template-areas:
+                "hea hea hea hea"
+                "nav nav nav nav"
+                "med med med med"
+                "mai mai mai mai"
+                "asi asi asi asi"
+                "card001 card002 card003 "
+
+                "foo foo foo foo"
+                "sub sub sub sub"
+                ;
+            }
+            div#media
+            {
+                min-height:10rem;
+                transition: all 2s;
+            }
+            main 
+            {
+                min-height:10rem;
+                transition: all 2s;
+            }
+        }
+
+        @media screen and (min-width:768px)
+        {
+            body{background-color: #FF62C2;}
+            #container 
+            {
+                display:grid;
+                grid-template-areas: 
+                "hea hea hea hea"
+                "nav nav nav nav"
+                "med med med med"
+                "mai mai mai asi"
+                "foo foo foo asi"
+                "card001 card001 card001 card001"
+                "card002 card002 card002 card002"
+                "card003 card003 card003 card003"
+                "sub sub sub sub"
+                ;
+            }
+        }
+
+        @media screen and (min-width:1200px)
+        {
+            body{background-color: hotpink;}
+            header{min-height:10rem;}
+            div#media{min-height:18rem;}
+            main{min-height: 30rem;}
+        }
+
+    </style>
+</head>
+<body>
+    <div id="container">
+        <nav>Nav</nav>
+        <header>Header</header>
+        <div id="media">Media</div>
+        <main>Main</main>
+        <aside>Aside</aside>
+        <div id="card001">card001</div>
+        <div id="card002">card002</div>
+        <div id="card003">card003</div>
+        <footer>Footer</footer>
+        <footer id="subfooter">Subfooter</footer>
+    </div>
+</body>
+</html>
