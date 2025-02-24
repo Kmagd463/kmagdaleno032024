@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Floated Images</title>
+    <title>Centerd Images</title>
     <style>
         body
         {
@@ -33,7 +33,7 @@
             display:block;
             margin:auto;
         }
-        figure.rightimage
+        img.rightimage
         {
             max-width:60%;
             height:auto;
@@ -41,19 +41,13 @@
             margin:1rem;
             box-shadow: 2px 2px 2px 2px black;
         }
-        figure.leftimage
+        img.leftimage
         {
             max-width:60%;
             height:auto;
-            float:left;
+            float:right;
             margin:1rem;
             box-shadow: 2px 2px 2px 2px black;
-        }
-        main img
-        {
-            max-width:100%;
-            box-shadow: 2px 2px 2px 2px black;
-
         }
         figure
         {
@@ -63,21 +57,12 @@
         {
             text-align: center;
         }
-
-        /* Clearfix */
-        .clearfix::after
-        {
-            content:"";
-            display: table;
-            clear:both;
-        }
     </style>
 </head>
 <body>
     <div id="wrapper">
         <main>
-            <main class="clearfix"></main>
-            <h1>Floated Images</h1>
+            <h1>Centered Images</h1>
 
             <figure> 
                 <img class="centerimage" src="Images/Image3.png" alt="A Computer Keyboard Logtech A5000 ">
@@ -90,8 +75,8 @@
 
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum ducimus, quod modi quia quas doloremque, quam atque vitae iste voluptas facilis voluptatum deserunt tenetur neque magni, et officiis. Recusandae commodi temporibus eveniet aspernatur impedit quasi accusantium? Harum fuga temporibus deserunt labore nemo. Maxime nesciunt ullam voluptatem eaque esse in earum ratione suscipit fuga ut, cupiditate, quam quae ipsam odit quasi!</p>
 
-            <figure class= "rightimage">
-                <img  src="Images/Image1.png" alt="A screen with code">
+            <figure>
+                <img class= "centerimage" src="Images/Image1.png" alt="A screen with code">
                 <figcaption> Code on Linex </figcaption>
             </figure>
 
@@ -100,8 +85,8 @@
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum ducimus, quod modi quia quas doloremque, quam atque vitae iste voluptas facilis voluptatum deserunt tenetur neque magni, et officiis. Recusandae commodi temporibus eveniet aspernatur impedit quasi accusantium? Harum fuga temporibus deserunt labore nemo. Maxime nesciunt ullam voluptatem eaque esse in earum ratione suscipit fuga ut, cupiditate, quam quae ipsam odit quasi!</p>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum ducimus, quod modi quia quas doloremque, quam atque vitae iste voluptas facilis voluptatum deserunt tenetur neque magni, et officiis. Recusandae commodi temporibus eveniet aspernatur impedit quasi accusantium? Harum fuga temporibus deserunt labore nemo. Maxime nesciunt ullam voluptatem eaque esse in earum ratione suscipit fuga ut, cupiditate, quam quae ipsam odit quasi!</p>
             
-            <figure class="leftimage">
-                <img  src="Images/MainImage.png" alt="Screen with code ">
+            <figure>
+                <img class="centerimage" src="Images/MainImage.png" alt="Screen with code ">
                 <figcaption> Code on Windows</figcaption>
             </figure>
            

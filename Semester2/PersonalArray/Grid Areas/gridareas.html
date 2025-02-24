@@ -17,11 +17,12 @@
         background-color: #FD8FAB;
         margin:auto;
         border: 30px solid white;
+        gap: 10px;
         }
         nav
         {
             background-color: #FFB3C6;
-            min-height:5rem;
+            min-height:8rem;
             padding:1rem;
             grid-area: nav;
         }
@@ -48,28 +49,28 @@
         aside
         {
             background-color: #FF8CBD;
-            min-height:5rem;
+            min-height:8rem;
             padding:1rem;
             grid-area: asi;
         }
         div#card001
         {
             background-color: #F4C9D5;
-            min-height:5rem;
+            min-height:8rem;
             padding:1rem;
             grid-area: card001;
         }
         div#card002
         {
             background-color: #F4C9D5;
-            min-height:5rem;
+            min-height:8rem;
             padding:1rem;
             grid-area: card002;
         }
         div#card003
         {
             background-color: #F4C9D5;
-            min-height:5rem;
+            min-height:8rem;
             padding:1rem;
             grid-area: card003;
         }
@@ -83,7 +84,7 @@
         footer#subfooter
         {
             background-color: #FFB2EE;
-            min-height:5rem;
+            min-height:12rem;
             padding:1rem;
             grid-area: sub;
         }
@@ -114,8 +115,9 @@
                 "med med med med"
                 "mai mai mai mai"
                 "asi asi asi asi"
-                "card001 card002 card003 "
-
+                "card001 card001 card001 card001"
+                "card002 card002 card002 card002"
+                "card003 card003 card003 card003"
                 "foo foo foo foo"
                 "sub sub sub sub"
                 ;
@@ -139,15 +141,13 @@
             {
                 display:grid;
                 grid-template-areas: 
-                "hea hea hea hea"
-                "nav nav nav nav"
-                "med med med med"
-                "mai mai mai asi"
-                "foo foo foo asi"
-                "card001 card001 card001 card001"
-                "card002 card002 card002 card002"
-                "card003 card003 card003 card003"
-                "sub sub sub sub"
+                "hea hea hea"
+                "nav nav nav"
+                "med med med"
+                "mai mai asi "
+                "card001 card002 card003"
+                "foo foo foo"
+                "sub sub sub"
                 ;
             }
         }
