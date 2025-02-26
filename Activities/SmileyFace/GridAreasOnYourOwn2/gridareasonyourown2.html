@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid Areas 2</title>
+    <style>
+        body
+        {
+            background-color: #F9EEED;
+            padding-top: 1rem;
+
+        }
+        #container
+        {
+            max-width: 1200px;
+            width: 80%;
+            background-color: #FFECD2;
+            margin:auto;
+            border: 30px solid white;
+            gap: 10px;
+        }
+        nav
+        {
+            background-color: #F7D479;
+            min-height:8rem;
+            padding:1rem;
+            grid-area: nav;
+        }
+        header
+        {
+        background-color: #C4D6E7; 
+        min-height:8rem;
+        padding:1rem;
+        grid-area: hea;
+        }
+        div#media
+        {
+            background-color: #DEEAF8;
+            min-height:50rem;
+            padding:1rem;
+            grid-area: med;
+        }
+        main
+        {
+            background-color: #F9B288;
+            min-height:8rem;
+            padding:1rem;
+            grid-area:mai;
+        }
+        div#card001
+        {
+            background-color: #FCE6AA;
+            min-height:8rem;
+            padding:1rem;
+            grid-area: card001;
+        }
+        div#card002
+        {
+            background-color: #FFF5C9;
+            min-height:8rem;
+            padding:1rem;
+            grid-area: card002;
+        }
+        footer
+        {
+            background-color: #AFE6FC;
+            min-height:8rem;
+            padding:1rem;
+            grid-area: foo;
+        }
+        footer#subfooter
+        {
+            background-color: #AAD7F9;
+            min-height:8rem;
+            padding:1rem;
+            grid-area: sub;
+        }
+        #wrapper
+        {
+            width:80%;
+            margin:auto;
+            max-width: 1200px;
+        }
+
+
+
+
+
+        @media screen and (min-width: 768px)
+        {
+            body{background-color: #F9EEED;}
+            #container
+            {
+                display:grid;
+                gap:10px;
+                grid-template-areas:
+                "hea hea hea"
+                "med med med"
+                "nav mai mai"
+                "nav card001 card002"
+                "foo foo foo"
+                "sub sub sub"
+                ;
+            }
+            div#media
+            {
+                min-height:10rem;
+                transition: all 2s;
+            }
+            main
+            {
+                min-height:10rem;
+                transition: all 2s;
+            }
+        }
+
+    </style>
+</head>
+<body>
+    <div id="container">
+        <nav>Nav</nav>
+        <header>Header</header>
+        <div id="media">Media</div>
+        <main>Main</main>
+        <div id="card001">card001</div>
+        <div id="card002">card002</div>
+        <footer>Footer</footer>
+        <footer id="subfooter">Subfooter</footer>
+    </div>
+</body>
+</html>
