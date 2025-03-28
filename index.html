@@ -46,6 +46,7 @@
             position: absolute;
             left: calc(50% - 75px);
             transition: all 2s;
+            z-index:1;
         
 
         }
@@ -54,25 +55,45 @@
             
             background-color: none; 
             min-height: 40px;
-            width: 400px;
+            width: 500px;
             display: flex;
             align-items: center;
-            justify-content: space-evenly;
+            justify-content: center;
+            gap:.5rem;
             position: absolute;
             bottom: 0px;
-            left:calc(50% - 150px);
+            left:calc(50% - 250px);
         }
         #pagenav a 
         {
             color: white;
             text-decoration:none;
             text-transform: uppercase;
+            font-size:.8rem;
         }
         #media
         {
             min-height: 200px;
             background-color:#FFEDEA; 
             padding:1rem;
+        }
+        #topnav
+        {
+
+            background-color: pink;
+            padding:1rem;
+            text-align:center;
+
+
+        }
+        #topnav .container
+        {
+            background-color: orange;
+            
+        }
+        #topnav a 
+        {
+            color:white;
         }
         iframe 
         {
@@ -111,6 +132,7 @@
             background-color: #FCD5CE;
             background-image: url(Images/images.jpg); 
             padding:1rem;
+            align-items: center;
         }
         #semester2
         {
@@ -118,6 +140,7 @@
             background-color: #FCD5CE;
             background-image: url(Images/images.jpg);
             padding:1rem;
+            align-items: center;
         }
         #pagefooter
         {
@@ -207,19 +230,37 @@
         <div class="container">
             <div id="logo"></div>  
             <nav id="pagenav">
-                <a href="#career">Career</a> 
-                |
-                <a href="#semester1">Semester 1 </a>
-                <!-- |
-                <a href="#semester2">Semester 2</a> -->
-                |
-                <a href="#keyassignments">Key Assignments</a>
+                <a href="index.html">Home</a> |
+                <a href="index.html" >Work samples</a> |
+                <a href="index.html">Certificates</a> |
             </nav>
         </div>
         
 
     </header>
     <!-- end pageheader -->
+         <!-- begin topnav -->
+    <nav id="topnav">
+       
+        
+        <div class="topnav">
+            <a href="#career">Career</a> 
+            |
+            <a href="#semester1">Semester 1</a>
+            |
+            <a href="#semester2">Semester 2</a> 
+            |
+            <a href="#keyassignments">Key Assignments</a> |
+
+        </nav>
+        <!-- end topnav -->
+
+
+     
+        
+        <div class="container">
+            <!-- <h2>PageFooter</h2> -->
+
 
     <!-- beging media -->
     <section id="media">
@@ -235,11 +276,11 @@
        
         <div class="container"> <h2>Career</h2>
             <ul>
-                <li><a href="https://docs.google.com/document/d/1mq6dIEvaUD4BhM-b2IhQKSgHqtoD6-t3LCkCVoiewaY/edit?tab=t.0">References</a></li>
-                <li><a href="https://drive.google.com/file/d/1rwF2GyQqS8XC--y4s1yrLgYQWJrBRf-R/view">Job Application</a></li>
-                <li><a href="https://docs.google.com/document/d/132axRhvTPgMmjJHOXRQT3Pzr2ckIt-gDvUVpkMCwYoo/edit?tab=t.0"> Letter of Introduction</a></li>
-                <li><a href="https://docs.google.com/document/d/1wQq12FTqj5buR7t789Fxv4KsyqWj1zhn8WSxBZzp9G4/edit?tab=t.0#heading=h.ljy0lwyol5cl">Career Action Plan</a></li>
-                <li><a href="https://docs.google.com/document/d/1BqyOf2hb542cyCXfzvd0Iljvzm5JJVUp_orsQZbOZ7c/edit?tab=t.0">Resume</a></li>
+                <li><a href="file:///Users/kmagd-s463/Downloads/Copy%20of%20Template%20References.pdf">References</a></li>
+                <li><a href="file:///Users/kmagd-s463/Downloads/Kami%20Export%20-%20Katie%20Magdaleno%20-%20[Template]%20Job%20App%20(1).pdf">Job Application</a></li>
+                <li><a href="file:///Users/kmagd-s463/Downloads/Copy%20of%20Template%20Letter%20of%20Introduction.pdf"> Letter of Introduction</a></li>
+                <li><a href="file:///Users/kmagd-s463/Downloads/Copy%20of%20Template%20Career%20Action%20Plan.pdf">Career Action Plan</a></li>
+                <li><a href="file:///Users/kmagd-s463/Downloads/Copy%20of%20Template%20Resume.pdf">Resume</a></li>
 
             </ul>
 
@@ -265,7 +306,9 @@
         <div class="container">
         <a name="semester1"></a>
         <h2>Semester1</h2>
-        
+        <ul>
+            <li><a href="Semester1/Canvasdrawing/canvasdrawing02.html">Canvas Drawing 2</a></li>
+        </ul>
         </div>
     </section>
     
@@ -315,7 +358,7 @@
             <a href="https://www.chusd.org/">chs</a> |
             <a href="https://classroom.google.com/">classroom</a> | 
             <a href="https://codepip.com/">codepip</a>
-            <a href="https://app.netlify.com/sites/kmagdaleno032024/configuration/general">Netlify</a>
+            <a href="https://app.netlify.com/sites/kmagdaleno032024/configuration/general">netlify</a>
         </div>
 
         </footer>
@@ -343,10 +386,9 @@
                 <div class="footerlinks">
                     <h3>Links</h3>
                     <ul>
-                        <li>Career</li>
-                        <li>Semester1</li>
-                        <!-- <li>Semester2</li> -->
-                        <li>Key Assignments</li>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="worksamples.html">Work Samples</a></li>
+                        <li><a href="certificates.html">Certificates</a></li>
                     </ul>
                 </div>
 </div>
@@ -354,6 +396,6 @@
 
         </div>
         </footer>
-        <!-- end subfooterfooter -->
+        <!-- end subfooter -->
 </body>
 </html>

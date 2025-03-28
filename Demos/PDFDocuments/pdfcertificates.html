@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PDF Certificates</title>
+    <style>
+        iframe
+        {
+            width:100%;
+            max-width:1200px;
+            aspect-ratio:4/3;
+            display:block;
+            margin:auto;
+        }
+    </style>
+</head>
+<body>
+    <h1>PDF Certificates</h1>
+    <h2>Web App Development Certificate</h2>
+    <iframe src="PDFS/WebPageDesignWebDevCertificate.pdf" frameborder="0"></iframe>
+    <h2> English Humanity Certificate</h2>
+    <iframe src="PDFS/EnglishHumanityCertificate.pdf" frameborder="0"></iframe>
+
+    <script>
+        window.addEventListener('resize', refresh);
+        function refresh()
+        {
+            window.location.reload(true);
+        }
+    </script>
+</body>
+</html>
