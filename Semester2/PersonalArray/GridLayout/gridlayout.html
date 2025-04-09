@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Grid Layout </title>
+    <style>
+        body
+        {
+        }
+
+        #pageheader
+        {
+            background-color: orange;
+            min-height: 100px;
+            padding:1rem;
+            
+        }
+        #topnav ul{
+            background-color: orange;
+        }
+
+        #container
+        {
+            background-color: purple;
+            max-width:1200px;
+            width:90%;
+            padding:1rem;
+            padding-top:100px;
+            padding:20px;
+            margin:auto;
+        }
+        #wrapper
+        {
+            background-color: green;
+            max-width: 90%;
+            margin:auto;
+            padding:1rem;
+            display:grid;
+            grid-template-columns: 1fr;
+            grid-template-rows:
+            repeat(0, minmax(150px, auto));
+            grid-template-areas:
+            "medi"
+            "midn"
+            "main"
+            "sec1"
+            "sec2"
+            "sec3"
+            "page"
+            "subf";
+            gap:1rem;
+        }
+        #media
+        {
+            background-color: lime;
+            padding:1rem;
+            grid-area:medi;
+            position:relative;
+        }
+        #logo
+        {
+            background-color: silver;
+            width:75px;
+            height:75px;
+            border:2px solid white;
+            position:absolute;
+            top:-30px;
+            left:-30px;
+            border-radius:50%;
+        }
+        #midnav
+        {
+            background-color: aqua;
+            padding:1rem;
+            grid-area:midn;
+        }
+        #midnav ul{}
+        main
+        {
+            background-color: white;
+            padding:1rem;
+            grid-area:main;
+        }
+
+        .cards
+        {
+            background-color: beige;
+            padding:1rem;
+            border:1px solid silver;
+            border-radius:6px;
+        }
+
+        #sectionone
+        {
+            grid-area:sec1;
+        }
+        #sectiontwo
+        {
+            grid-area:sec2;
+        }
+        #sectionthree
+        {
+            grid-area:sec3;
+        }
+
+        #pagefooter
+        {
+            background-color: gray;
+            padding:1rem;
+            grid-area:page;
+        }
+        #subfooter
+        {
+            background-color: magenta;
+            padding:1rem;
+            grid-area:subf;
+        }
+
+
+        @media screen and (min-width:768px)
+        {
+            #wrapper
+            {
+                grid-template-columns: 1fr 1fr 1fr;
+                grid-template-rows:
+                minmax(300px,auto) 
+                minmax(500px,auto) 
+                minmax(250px,auto) 
+                minmax(150px,auto) 
+                minmax(150px,auto);
+                grid-template-areas:
+                "medi medi medi"
+                "midn main main"
+                "sec1 sec2 sec3"
+                "page page page"
+                "subf subf subf";
+
+            }
+            #logo
+            {
+                width:150px;
+                height:150px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header id="pageheader">
+        #pageheader
+        <nav id="topnav">
+            <ul>
+                <li> Yahoo</li>
+                <li> Yahoo</li>
+                <li> Yahoo</li>
+                <li> Yahoo</li>
+            </ul>
+        </nav>
+    </header>
+
+    <h1> Grid Layout 3 </h1>
+    <div id="container">
+        <div id="wrapper">
+
+            <div id="media">
+                #media
+                <div id="logo"></div>
+            </div>
+
+            <nav id="midnav">
+                #midnav
+                <ul>
+                    <li>Yahoo</li>
+                    <li>Yahoo</li>
+                    <li>Yahoo</li>
+                    <li>Yahoo</li>
+                </ul>
+            </nav>
+
+            <main>
+                main - layouthree
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse laudantium porro magni quia aliquam hic similique eligendi quos a consequatur molestiae nesciunt sint nostrum magnam, veritatis veniam ducimus obcaecati iure cum. Officia neque blanditiis velit possimus voluptas eos veritatis dignissimos facilis aperiam magni magnam, accusantium fuga nihil numquam maxime quos distinctio ratione itaque est similique explicabo? Culpa, est. Amet, dicta!</p>
+            </main>
+
+            <section id="sectionone" class="cards">#sectionone</section>
+            <section id="sectiontwo" class="cards">#sectiontwo</section>
+            <section id="sectionthree" class="cards">#sectionthree</section>
+
+            <footer id="pagefooter">#pagefooter</footer>
+            <footer id="subfooter">#pagefooter</footer>
+        </div>
+        <!--end wrapper-->
+
+    </div>
+    <!--- end container-->
+</body>
+</html>
