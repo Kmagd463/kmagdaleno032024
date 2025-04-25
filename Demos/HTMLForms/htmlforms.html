@@ -91,13 +91,15 @@
     <legend>Radio Input Element</legend>
     <input type="radio" id="radhtml" value="html" name="language"><label for="radhtml">HTML</label>
     <input type="radio" id="radcss" value="css" name="language"><label for="radcss">CSS</label>
-    <input type="radio" id="radjavascript" value="javascript" name="language">
+    <input type="radio" id="radjavascript" value="javascript"
+    name="language">
     <label for="radjavascript">JavaScript</label>
-    <button id="savebutton">Save Radio to Local Storage</button>
-    <button id="loadbutton">Load Radio to Local Storage</button>
+    <br>
+    <button id="saveradiobutton">Save Radio to Local Storage</button>
+    <button id="loadradiobutton">Load Radio to Local Storage</button>
 </fieldset>
 <fieldset>
-    <legend>select Element</legend>
+    <legend>Select Element</legend>
     <select name="themeselectors" id="themeselector">
         <option value="redtheme"></option>
         <option value="pinktheme"></option>
@@ -110,5 +112,93 @@
 </fieldset>
     <p name="paragraphoutput" id="paragraphoutput"></p>
     </div>
+
+    <script>
+        // The display paragraph 
+        const paragraphOutput = document.getElementById('paragraphoutput');
+
+        //alert(paragraphOutput);
+        /*
+        Text Section
+        Add event listeners to buttons when the save button is clicked
+        saved to local storage
+        */
+        let saveTextButton;
+        saveTextButton = document.querySelector('#savetextbutton');
+        //alert(saveTextButton);
+        let loadTextButton;
+        loadTextButton = document.querySelector('#loadtextbutton');
+       // alert(loadTextButton)
+
+        // Add event listener 
+        saveTextButton.addEventListener('click', function()
+        {
+            let textName;
+            textName = document.querySelector('#textname').value;
+
+            //alert(textName);
+
+            if(textName.trim()  !== "")
+            {
+                localStorage.setItem('textUserName2021', textName);
+            }
+            else
+            {
+                alert(" Please enter a name before saying.");
+            }
+        });
+
+
+     
+
+
+    loadTextButton.addEventListener('click', function () {
+        let savedTextName;
+        savedTextName = localStorage.getItem('textUserName2021');
+
+        if(savedTextName !== null){
+            paragraphOutput.textContent = `Hello, ${savedTextName}!`;
+            
+        }
+        else{
+            paragraphOutput.textContent = "No none found in localStorage."
+        }
+     }
+    ); 
+     
+     
+     /*
+    //     Radio Section
+    //     */
+
+
+        let saveRadioButton;
+        saveRadioButton = document.querySelector('#saveradiobutton');
+        //alert(saveRadioButton);
+
+        let loadRadioButton;
+        loadRadioButton = document.querySelector('#loadradiobutton');
+
+    // alert(loadRadioButton);
+
+        saveRadioButton.addEventListener('click', function()
+        {
+            let selectedRadio;
+            selectedRadio = document.querySelector('input[name="language"]:checked');
+
+ 
+            
+
+        if(selectedRadio == null)
+        {
+            alert('Please select a language before saying');
+        }
+        else
+        {
+            localStorage.setItem('selectedLanguage2021', selectedRadio.value);
+        }       
+    
+    });
+    </script>
 </body>
 </html>
