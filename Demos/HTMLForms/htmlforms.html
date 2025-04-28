@@ -98,6 +98,7 @@
     <button id="saveradiobutton">Save Radio to Local Storage</button>
     <button id="loadradiobutton">Load Radio to Local Storage</button>
 </fieldset>
+
 <fieldset>
     <legend>Select Element</legend>
     <select name="themeselectors" id="themeselector">
@@ -141,6 +142,7 @@
             if(textName.trim()  !== "")
             {
                 localStorage.setItem('textUserName2021', textName);
+                alert("Name saved to local storage.");
             }
             else
             {
@@ -149,7 +151,6 @@
         });
 
 
-     
 
 
     loadTextButton.addEventListener('click', function () {
@@ -163,11 +164,14 @@
         else{
             paragraphOutput.textContent = "No none found in localStorage."
         }
-     }
+    }
+
+
+
     ); 
-     
-     
-     /*
+    
+    
+    /*
     //     Radio Section
     //     */
 
@@ -187,7 +191,7 @@
             selectedRadio = document.querySelector('input[name="language"]:checked');
 
  
-            
+            //alert(selectRadio);
 
         if(selectedRadio == null)
         {
@@ -196,8 +200,33 @@
         else
         {
             localStorage.setItem('selectedLanguage2021', selectedRadio.value);
+            alert("Selected Language saved to local storage.");
         }       
     
+    });
+
+    loadRadioButton.addEventListener('click', function(){
+        let savedLanguage;
+        savedLanguage = localStorage.getItem('selectedLanguage2021');
+
+        if(savedLanguage !== null)
+    {
+        let radioToCheck = document.querySelector(`input[name="language"][value="${savedLanguage}"]`);
+        if(radioToCheck!==null)
+    {
+            radioToCheck.checked = true;
+            paragraphOutput.textContent = `You selected: ${savedLanguage}`;
+    }
+    else
+    {
+        paragraphOutput.textContent = 'Saved language not found.'
+    }
+
+    }
+    else
+    {
+        paragraphOutput.textContent="No language found in localStorage"
+    }
     });
     </script>
 </body>
