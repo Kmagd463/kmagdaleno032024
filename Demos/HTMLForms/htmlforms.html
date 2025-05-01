@@ -4,14 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title> HTML Forms</title>
+    <link rel="stylesheet" href="redtheme.css" id="linktheme">
     <style>
-        body
-        {
-            background-color: #F9EBBE;
-        }
+
         h1
         {
-            color:white;
+            color:black;
             text-align:center;
         }
         #formcontainer
@@ -101,15 +99,15 @@
 
 <fieldset>
     <legend>Select Element</legend>
-    <select name="themeselectors" id="themeselector">
-        <option value="redtheme"></option>
-        <option value="pinktheme"></option>
-        <option value="purpletheme"></option>
+    <select name="themeselectors" id="themeselector" onchange="updateTheme()">
+        <option value="redtheme.css">Red Theme</option>
+        <option value="pinktheme.css">Pink Theme </option>
+        <option value="purpletheme.css">Purple Theme</option>
     </select>
     <br>
 
-    <button id="saveselectorbutton">Save select to Local Storage</button>
-    <button id="loadselector">Load Select from Local Storage</button>
+    <!-- <button id="saveselectorbutton">Save select to Local Storage</button>
+    <button id="loadselector">Load Select from Local Storage</button> -->
 </fieldset>
     <p name="paragraphoutput" id="paragraphoutput"></p>
     </div>
@@ -227,6 +225,44 @@
     {
         paragraphOutput.textContent="No language found in localStorage"
     }
+
+
+    });
+
+    // SELECT SECTION 
+    let linkTheme; // link to the stylesheet 
+    let selTheme; // selection form control to selecte theme
+
+    linkTheme = document.querySelector('#linktheme');
+    //alert(linkTheme);
+    selTheme = document.querySelector('#themeselector');
+    //alert(selTheme);
+
+    function updateTheme()
+    {
+        linkTheme.href = selTheme.value;
+        //alert(selTheme.value);
+        localStorage.setItem('selectedTheme2021', selTheme.value);
+    }
+
+    window.addEventListener('load', function()
+    {
+        //alert();
+        let saveTheme;
+        savedTheme = localStorage.getItem('selectedTheme2021');
+
+        //alert(saveTheme);
+
+
+        if(savedTheme !==null)
+    {
+        linkTheme.href = savedTheme; // Load stlyesheet
+        selTheme.value = savedTheme;
+
+        // Provide feedback in paragraph output 
+        paragraphOutput.textContent = `${selTheme.value} loaded from localStorage!`;
+    }
+
     });
     </script>
 </body>
