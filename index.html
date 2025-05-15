@@ -11,6 +11,22 @@
             --color-secondary: silver;
             --color-tertiary: black;
         } */
+         /* Reset Browser */
+        /* *, *::before,
+         *::after {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        } */
+
+        /*  Fix Browser Bounce */
+        body
+        {
+            overflow-x:auto;
+            width:100%;
+            overscroll-behavior: none;
+        }
+
         html{
             scroll-behavior: smooth;
         }
@@ -240,6 +256,39 @@
             </nav>
         </div>
         
+        <style>
+            #career .container ul {
+                background-color: none;
+                list-style-type: none;
+                padding:0;
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+                gap:1rem;
+                max-width:700px;
+                margin:auto;
+            }
+
+            #career .container ul li{
+                background-color: #FDDAE1;
+                border: 1px solid black;
+                width:120px;
+                height: 120px;
+                padding: 1rem;
+                text-align: center;
+            }
+
+            #career a 
+            {
+                color:white;
+            }
+            #career li img{
+                width:50%;
+                display: block;
+                margin:auto;
+                margin: bottom 1rem;;
+            }
+        </style>
 
     </header>
     <!-- end pageheader -->
@@ -280,11 +329,29 @@
        
         <div class="container"> <h2>Career</h2>
             <ul>
-                <li><a href="file:///Users/kmagd-s463/Downloads/Copy%20of%20Template%20References.pdf">References</a></li>
-                <li><a href="file:///Users/kmagd-s463/Downloads/Kami%20Export%20-%20Katie%20Magdaleno%20-%20[Template]%20Job%20App%20(1).pdf">Job Application</a></li>
-                <li><a href="file:///Users/kmagd-s463/Downloads/Copy%20of%20Template%20Letter%20of%20Introduction.pdf"> Letter of Introduction</a></li>
-                <li><a href="file:///Users/kmagd-s463/Downloads/Copy%20of%20Template%20Career%20Action%20Plan.pdf">Career Action Plan</a></li>
-                <li><a href="file:///Users/kmagd-s463/Downloads/Copy%20of%20Template%20Resume.pdf">Resume</a></li>
+                <li><a href=""><img src="Images/businessman-svgrepo-com.svg" alt="">Cover Letter</a></li>
+
+                <li><a href="Images/ References (1).pdf">
+                    <img src="Images/businessman-svgrepo-com.svg" alt="Cover Letter">
+                    References</a></li>
+                
+                <li><a href="Images/JobAppication.pdf" >
+                    <img src="Images/businessman-svgrepo-com.svg" alt="Cover Letter">
+                    Job Application</a>
+
+                <li><a href="Images/ Letter of Introduction (1).pdf">
+                    <img src="images/businessman-svgrepo-com.svg" alt="Cover Letter">
+                    Letter of Introduction</a> </li>
+
+                <li><a href="Images/Career Action Plan (1).pdf">
+                    <img src="images/businessman-svgrepo-com.svg" alt="Cover Letter">
+                    Career Action Plan</a> </li>
+                <li><a href="Images/ Resume.pdf">
+                    <img src="images/businessman-svgrepo-com.svg" alt="Cover Letter">
+                    Resume</a> </li>
+                    <li><a href=""><img src="Images/businessman-svgrepo-com.svg" alt="">Recommendation Letter</a></li>
+                    <li><a href=""><img src="Images/businessman-svgrepo-com.svg" alt="">Work Samples</a></li>
+
 
             </ul>
 
