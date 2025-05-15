@@ -3,20 +3,325 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>certificates</title>
+    <title>Katie Magdaleno - Portfolio</title>
     <style>
-        iframe
+        /* :root
+        {
+            --color-primary: darkorange;
+            --color-secondary: silver;
+            --color-tertiary: black;
+        } */
+         /* Reset Browser */
+        /* *, *::before,
+         *::after {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        } */
+
+        /*  Fix Browser Bounce */
+        body
+        {
+            overflow-x:auto;
+            width:100%;
+            overscroll-behavior: none;
+        }
+
+        html{
+            scroll-behavior: smooth;
+        }
+        .container{
+            background-color: #fed5db;
+            min-height:12rem;
+            max-width: 120rem;
+            margin:auto;
+            padding:1rem 3rem 1rem 3rem;
+            position: relative;
+            border: 1px solid white;
+        }
+        #pageheader
+        {
+            min-height: 200px;
+            
+            background-color: #FDDAE1; 
+            padding:1rem;
+        }
+        #pageheader .container
+        {
+            background-color: pink;
+        }
+
+        #logo{
+            
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            background-image: url(Images/Logo3.png);
+            background-size: cover;
+            border: 5px solid #F9D3E2;
+            position: absolute;
+            left: calc(50% - 75px);
+            transition: all 2s;
+            z-index:1;
+        
+
+        }
+        #pagenav
+        {
+            
+            background-color: none; 
+            min-height: 40px;
+            width: 500px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap:.5rem;
+            position: absolute;
+            bottom: 0px;
+            left:calc(50% - 250px);
+        }
+        #pagenav a 
+        {
+            color: white;
+            text-decoration:none;
+            text-transform: uppercase;
+            font-size:.8rem;
+        }
+        #media
+        {
+        
+            background-color:#FFEDEA; 
+            padding:1rem;
+            
+        }
+        #topnav
+        {
+
+            background-color: pink;
+            padding:1rem;
+            text-align:center;
+
+
+        }
+        #topnav .container
+        {
+            background-color: orange;
+            
+        }
+        #topnav a 
+        {
+            color:white;
+        }
+        iframe 
         {
             width:100%;
             max-width:1200px;
-            aspect-ratio:4/3;
+            aspect-ratio:16/9;
             display:block;
             margin:auto;
+            border:2px solid white;
         }
+        #career
+        {
+            min-height: 200px;
+            background-color:#FED9DD;
+            padding:1rem;
+        }
+        #pagecontent
+        {
+            min-height: 200px;
+            background-color: white;
+            padding:1rem;
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+            font-size: x-large;
+            font-stretch: semi-condensed;
+        }
+        #keyassignments
+        {
+            min-height: 200px;
+            background-color: white;
+            padding:1rem;
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+            font-size: x-large;
+            font-stretch: semi-condensed;
+        }
+        #semester1
+        {
+            min-height: 200px;
+            background-color: #FCD5CE;
+            background-image: url(Images/images.jpg); 
+            padding:1rem;
+            align-items: center;
+        }
+        #semester2
+        {
+            min-height: 200px;
+            background-color: #FCD5CE;
+            background-image: url(Images/images.jpg);
+            padding:1rem;
+            align-items: center;
+        }
+        #pagefooter
+        {
+            /* min-height: 200px; */
+            background-color: pink;
+            padding:1rem;
+
+        }
+        #pagefooter .container
+        {
+            min-height:10px;
+            text-align:center;
+        }
+        #subfooter
+        {
+            /* min-height: 200px; */
+            background-color: hotpink;
+            padding:1rem;
+        }
+        .footerlinks
+        {
+            display:none;
+        }
+/* Media Queries */
+        @media only screen and (min-width: 320px)
+        {
+            #pagecontent
+            {
+                background-color: magenta;
+            }
+        }
+        @media only screen and (min-width: 480px)
+        {
+            #pagecontent
+            {
+                background-color: pink;
+            }
+
+            #media{
+            /* height: 450px; */
+            }
+
+        } 
+        
+        @media only screen and (min-width: 768px)
+        {
+            #flexsubfooter{
+                display:flex;
+                justify-content:space-between;
+            }
+            .footerlinks {
+
+                display: block;
+                min-width:250px;
+            }
+            #pagecontent
+            {
+                background-color:white;
+            }
+            #logo{
+                left: 25px;
+            }
+        }
+        
+        @media only screen and (min-width: 1024px)
+        {
+            #pagecontent
+            {
+                background-color: #FFFFFF;
+            }
+            #pagenav{
+                top: 0px;
+                right:0px;
+                left:auto;
+                bottom:auto;
+            }
+        } 
+        
+        @media only screen and (min-width: 1200px)
+        {
+            #pagecontent
+            {
+                background-color:white;
+            }
+        }  
     </style>
 </head>
 <body>
-    <h1> My Certificates</h1>
+    <!-- begin pageheader -->
+    <header id="pageheader">
+        <div class="container">
+            <div id="logo"></div>  
+            <nav id="pagenav">
+                <a href="index.html">Home</a> |
+                <a href="worksamples.html" >Work samples</a> |
+                <a href="certificates.html">Certificates</a> |
+            </nav>
+        </div>
+        
+        <style>
+            #career .container ul {
+                background-color: none;
+                list-style-type: none;
+                padding:0;
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+                gap:1rem;
+                max-width:700px;
+                margin:auto;
+            }
+
+            #career .container ul li{
+                background-color: #FDDAE1;
+                border: 1px solid black;
+                width:120px;
+                height: 120px;
+                padding: 1rem;
+                text-align: center;
+            }
+
+            #career a 
+            {
+                color:white;
+            }
+            #career li img{
+                width:50%;
+                display: block;
+                margin:auto;
+                margin: bottom 1rem;;
+            }
+        </style>
+
+    </header>
+    <!-- end pageheader -->
+         <!-- begin topnav -->
+    <nav id="topnav">
+       
+        
+        <div class="topnav">
+            <a href="#career">Career</a> 
+            |
+            <a href="#semester1">Semester 1</a>
+            |
+            <a href="#semester2">Semester 2</a> 
+            |
+            <a href="#keyassignments">Key Assignments</a> |
+
+        </nav>
+        <!-- end topnav -->
+
+
+     
+        
+        <div class="container">
+            <!-- <h2>PageFooter</h2> -->
+
+
+    <!-- beging media -->
+    <section id="media">
+
+        <h1> Certificates</h1>
     <h2>Adaptability</h2>
     <iframe src="PDFDOCUMENTS/CERTICATES/adaptability.pdf" frameborder="0"></iframe>
     <h2>Communication</h2>
@@ -27,12 +332,15 @@
     <iframe src="PDFDOCUMENTS/CERTICATES/criticalthinking.pdf" frameborder="0"></iframe>
     <h2>Typing Tests</h2>
     <iframe src="PDFDOCUMENTS/CERTICATES/TypingTests.pdf" frameborder="0"></iframe>
-    <script>
+
+ <script>
         window.addEventListener('resize', refresh);
+
         function refresh()
         {
             window.location.reload(true);
         }
-    </script>
-</body>
-</html>
+        </script>
+        </script>
+
+    <!-- begin career -->
