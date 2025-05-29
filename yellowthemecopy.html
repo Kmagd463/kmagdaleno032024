@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Katie Magdaleno - Portfolio</title>
 
-    <link id="stylelink" rel="stylesheet" href="yellowtheme.css">
+    <link id="stylelink" rel="stylesheet" href="greentheme.css">
     <style>
         /* :root
         {
@@ -43,7 +43,7 @@
             scroll-behavior: smooth;
         }
         .container{
-            background-color: #FED9DD;
+            background-color: #FFE89D;
             min-height:12rem;
             max-width: 120rem;
             margin:auto;
@@ -55,12 +55,12 @@
         {
             min-height: 200px;
             
-            background-color: #FDDAE1; 
+            background-color: #FFE89D; 
             padding:1rem;
         }
         #pageheader .container
         {
-            background-color: pink;
+            background-color: #FFEEB6;
         }
 
         #logo{
@@ -70,7 +70,7 @@
             border-radius: 50%;
             background-image: url(Images/Logo3.png);
             background-size: cover;
-            border: 5px solid #F9D3E2;
+            border: 5px solid #FFF9E7;
             position: absolute;
             left: calc(50% - 75px);
             transition: all 2s;
@@ -94,7 +94,7 @@
         }
         #pagenav a 
         {
-            color: white;
+            color: black;
             text-decoration:none;
             text-transform: uppercase;
             font-size:.8rem;
@@ -102,13 +102,13 @@
         #media
         {
         
-            background-color:#FFEDEA; 
+            background-color:#FFF9E7; 
             padding:1rem;
         }
         #topnav
         {
 
-            background-color: pink;
+            background-color: #FFEEB6;
             padding:1rem;
             text-align:center;
 
@@ -121,7 +121,7 @@
         }
         #topnav a 
         {
-            color:white;
+            color:black;
         }
         iframe 
         {
@@ -133,13 +133,13 @@
         #career
         {
             min-height: 200px;
-            background-color:white;
+            background-color:#FFF4CE;
             padding:1rem;
         }
         #pagecontent
         {
             min-height: 200px;
-            background-color: white;
+            background-color: #FFF4CE;
             padding:1rem;
             font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
             font-size: x-large;
@@ -148,7 +148,7 @@
         #keyassignments
         {
             min-height: 200px;
-            background-color: white;
+            background-color: #FFF4CE;
             padding:1rem;
             font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
             font-size: x-large;
@@ -157,23 +157,23 @@
         #semester1
         {
             min-height: 200px;
-            background-color: #FCD5CE;
-            background-image: url(Images/images.jpg); 
+            background-color: #FFF4CE;
+            background-image: url(Images/yellowthemebackground.jpg); 
             padding:1rem;
             align-items: center;
         }
         #semester2
         {
             min-height: 200px;
-            background-color: #FCD5CE;
-            background-image: url(Images/images.jpg);
+            background-color: #FFF4CE;
+            background-image: url(Images/yellowthemebackground.jpg);
             padding:1rem;
             align-items: center;
         }
         #pagefooter
         {
             /* min-height: 200px; */
-            background-color: #FFEDEA;
+            background-color: #FFF4CE;
             padding:1rem;
 
         }
@@ -185,7 +185,7 @@
         #subfooter
         {
             /* min-height: 200px; */
-            background-color: #FFEDEA;
+            background-color: #FFF4CE;
             padding:1rem;
         }
         .footerlinks
@@ -197,14 +197,14 @@
         {
             #pagecontent
             {
-                background-color: #FFEDEA;
+                background-color: #FFF4CE;
             }
         }
         @media only screen and (min-width: 480px)
         {
             #pagecontent
             {
-                background-color: white;
+                background-color: #FFF4CE;
             }
 
             #media{
@@ -226,7 +226,7 @@
             }
             #pagecontent
             {
-                background-color:white;
+                background-color:#FFF4CE;
             }
             #logo{
                 left: 25px;
@@ -288,8 +288,8 @@
             }
 
             #career .container ul li{
-                background-color: #FFEDEA;
-                border: 1px solid white;
+                background-color: #FFF4CE;
+                border: 1px solid black;
                 width:120px;
                 height: 120px;
                 padding: 1rem;
@@ -298,7 +298,7 @@
 
             #career a 
             {
-                color:white;
+                color:black;
             }
             #career li img{
                 width:50%;
@@ -309,24 +309,17 @@
         </style>
 
     </header>
-
     <script>
-        // Select the select control (dropdown)
         let selStylesheet;
         selStylesheet = document.querySelector('#selstylesheet');
-        //alert(selStylesheet.value);
 
-        // Select the link to the external style sheet
         let styleLink;
-        styleLink = document.querySelector('#stylelink');
-        //alert(styleLink);
-;
+        styleLink =document.querySelector('#stylelink');
+        //alert(stylelink);
+
         function updateStylesheet()
         {
-            //alert(selStylesheet.value);
-            styleLink.href = selStylesheet.value; 
-
-            // Save to local storage 
+            styleLink.href = selStylesheet.value;
             localStorage.setItem('selectedStylesheet2021', selStylesheet.value);
         }
 
@@ -344,6 +337,8 @@
             selStylesheet.value = savedStylesheet;
         }
         });
+
+
     </script>
     <!-- end pageheader -->
          <!-- begin topnav -->
@@ -372,8 +367,8 @@
     <!-- beging media -->
     <section id="media">
 
-        <iframe  src="https://www.youtube.com/embed/BSBFaWLA03M?si=OEVIsy7RRWcNmlYS" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-
+        <!-- <iframe  src="https://www.youtube.com/embed/BSBFaWLA03M?si=OEVIsy7RRWcNmlYS" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe> -->
+<iframe width="560" height="315" src="https://www.youtube.com/embed/BV7IYFGqD9E?si=UPPUympQEVVjoDWb" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
     </section>
     <!-- end media -->
 

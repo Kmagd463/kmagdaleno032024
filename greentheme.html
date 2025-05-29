@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Katie Magdaleno - Portfolio</title>
 
-    <link id="stylelink" rel="stylesheet" href="yellowtheme.css">
+    <link id="stylelink" rel="stylesheet" href="greentheme.css">
     <style>
         /* :root
         {
@@ -309,24 +309,17 @@
         </style>
 
     </header>
-
     <script>
-        // Select the select control (dropdown)
         let selStylesheet;
         selStylesheet = document.querySelector('#selstylesheet');
-        //alert(selStylesheet.value);
 
-        // Select the link to the external style sheet
         let styleLink;
-        styleLink = document.querySelector('#stylelink');
-        //alert(styleLink);
-;
+        styleLink =document.querySelector('#stylelink');
+        //alert(stylelink);
+
         function updateStylesheet()
         {
-            //alert(selStylesheet.value);
-            styleLink.href = selStylesheet.value; 
-
-            // Save to local storage 
+            styleLink.href = selStylesheet.value;
             localStorage.setItem('selectedStylesheet2021', selStylesheet.value);
         }
 
@@ -344,6 +337,8 @@
             selStylesheet.value = savedStylesheet;
         }
         });
+
+
     </script>
     <!-- end pageheader -->
          <!-- begin topnav -->
