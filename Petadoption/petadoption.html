@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Pet Adoption </title>
+    <style>
+        body
+        {
+            background-color: #d9e6a1;
+            background-image: url(Images/Background.jpg);
+        }
+
+        #pageheader
+        {
+            background-color: #F6F6DA;
+    
+
+            
+        }
+        #topnav ul{
+            background-color: #F6F6DA;
+            list-style-type: none; 
+            display:flex;
+            justify-content: space-evenly;
+            padding: .5rem;
+
+        }
+
+        #topnav ul li a
+        {
+            color:#C7D974;
+        }
+
+        #container
+        {
+            background-color: #d9e6a1;
+            max-width:1000px;
+            width:90%;
+            padding:1rem;
+            padding-top:100px;
+            padding:20px;
+            margin:auto;
+        }
+        #wrapper
+        {
+            background-color: #C8DA74;
+            max-width: 90%;
+            margin:auto;
+            padding:1rem;
+            display:grid;
+            grid-template-columns: 1fr;
+            grid-template-rows:
+            repeat(0, minmax(150px, auto));
+            grid-template-areas:
+            "medi"
+            "midn"
+            "main"
+            "subf";
+            gap:1rem;
+        }
+        #media
+        {
+            background-color: lime;
+            max-width: 900px;
+            height: 420px;
+            padding:1rem;
+            grid-area:medi;
+            position:relative;
+            background-image: url(Images/kitten.jpg);
+            background-size:cover;
+            background-position: center center;
+        }
+        #logo
+        {
+            background-color: silver;
+            width:130px;
+            height:130px;
+            border:2px solid white;
+            position:absolute;
+            background-size:cover;
+            top:-30px;
+            left:-30px;
+            border-radius:50%;
+            background-image: url(Images/Logo3.jpg) ;
+            
+        }
+        #midnav
+        {
+            background-color: #F6F6DA;
+            padding:1rem;
+            grid-area:midn;
+        }
+
+        #midnav ul
+        {
+            list-style-type: none;
+            padding-left: 0;
+            
+
+
+        }
+        #midnav ul li 
+        {
+            padding:.5rem;
+            border-top: 1px solid #C7D974;
+
+
+        }
+        #midnav ul li:hover
+        {
+            background-color: white;
+
+
+        }
+
+        main
+        {
+            background-color: white;
+            padding:1rem;
+            grid-area:main;
+            font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        }
+
+        #subfooter
+        {
+            background-color: #EBEBC8;
+            padding:1rem;
+            grid-area:subf;
+        }
+
+
+
+        @media screen and (min-width:768px)
+        {
+            #wrapper
+            {
+                grid-template-columns: 1fr 1fr 1fr;
+                grid-template-rows:
+                minmax(300px,auto) 
+                minmax(500px,auto) 
+                minmax(40px,auto);
+                grid-template-areas:
+                "medi medi medi"
+                "midn main main"
+                "subf subf subf";
+
+            }
+            #logo
+            {
+                width:150px;
+                height:150px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header id="pageheader">
+
+        <nav id="topnav">
+       <ul>
+                <li><a href="#">Prices</a>  </li>           
+                <li><a href="#">Our Animals</a>  </li>           
+                <li><a href="#">Donate</a>  </li>           
+
+       </ul>
+
+        </nav>
+    </header>
+
+    <div id="container">
+        <div id="wrapper">
+
+            <div id="media">
+
+                <div id="logo"></div>
+            </div>
+
+            <nav id="midnav">
+
+                <ul>
+                    <li>Home</li>
+                    
+                    <li>Joys of Pets!</li>
+            
+                    <li>Gallery</li>
+                
+                    <li>Testimonials</li>
+                </ul>
+            </nav>
+
+            <main>
+                <h1>Welcome to Central Valley Pet Adoption!</h1>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Velit ducimus labore, ea asperiores eum iure repellendus, quibusdam, maxime dicta praesentium officiis eos? Doloribus dicta asperiores quos voluptate soluta velit laudantium vero praesentium fuga, autem cupiditate, quo doloremque? Ullam incidunt earum velit exercitationem dignissimos minus dolorem nihil laborum est aut iste, quisquam similique ea vel asperiores, dolor id fugit sequi ex nam laudantium! At quis doloremque totam vitae tempore, minima nostrum aperiam cupiditate laborum laudantium amet eius eos consequuntur dolores dolore doloribus quod vel non. Mollitia, similique rerum? Vitae amet ipsam alias iure sapiente magni rerum, provident quidem officiis quasi incidunt culpa cum consequatur quae natus magnam cupiditate eligendi unde aut modi aspernatur ut velit fugiat. Accusantium inventore quam nulla neque quos qui! Debitis voluptates, voluptas molestiae id autem porro aspernatur.</p>
+            </main>
+
+            <footer id="subfooter">© Career Skills Challenge</footer>
+        </div>
+        <!--end wrapper-->
+
+    </div>
+
+</body>
+</html>
